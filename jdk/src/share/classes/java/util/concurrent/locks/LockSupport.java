@@ -116,6 +116,12 @@ import sun.misc.Unsafe;
  *     LockSupport.unpark(waiters.peek());
  *   }
  * }}</pre>
+ * LockSupport 是用来创建锁和其他同步类的基本线程阻塞原语每个使用
+ *
+ * LockSupport 的线程都会与一个许可与之关联：
+ *  1）如果该许可可用，并且可在进程中使用，则调用 #park(...) 将会立即返回，否则可能阻塞。
+ *  2）如果许可尚不可用，则可以调用 #unpark(...) 使其可用。
+ *  3）但是，注意许可不可重入，也就是说只能调用一次 park(...) 方法，否则会一直阻塞。
  */
 public class LockSupport {
     private LockSupport() {} // Cannot be instantiated.

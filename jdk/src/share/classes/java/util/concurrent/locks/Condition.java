@@ -176,7 +176,14 @@ import java.util.Date;
  * @since 1.5
  * @author Doug Lea
  */
+
+/**
+ * 条件 Condition 接口，定义了一系列的方法，来对阻塞和唤醒线程
+ * Condition 为一个接口，其下仅有一个实现类 ConditionObject ，由于 Condition 的操作需要获取相关的锁，而 AQS则是同步锁的实现基础，所以 ConditionObject 则定义为 AQS 的内部类
+ */
 public interface Condition {
+
+    /** ================== 阻塞 ================== **/
 
     /**
      * Causes the current thread to wait until it is signalled or
@@ -228,7 +235,7 @@ public interface Condition {
      * @throws InterruptedException if the current thread is interrupted
      *         (and interruption of thread suspension is supported)
      */
-    void await() throws InterruptedException;
+    void await() throws InterruptedException; // 造成当前线程在接到信号或被中断之前一直处于等待状态。
 
     /**
      * Causes the current thread to wait until it is signalled.
@@ -264,7 +271,7 @@ public interface Condition {
      * thrown (such as {@link IllegalMonitorStateException}) and the
      * implementation must document that fact.
      */
-    void awaitUninterruptibly();
+    void awaitUninterruptibly(); // 造成当前线程在接到信号之前一直处于等待状态。【注意：该方法对中断不敏感】。
 
     /**
      * Causes the current thread to wait until it is signalled or interrupted,
@@ -355,7 +362,7 @@ public interface Condition {
      * @throws InterruptedException if the current thread is interrupted
      *         (and interruption of thread suspension is supported)
      */
-    long awaitNanos(long nanosTimeout) throws InterruptedException;
+    long awaitNanos(long nanosTimeout) throws InterruptedException; // 造成当前线程在接到信号、被中断或到达指定等待时间之前一直处于等待状态。返回值表示剩余时间，如果在`nanosTimeout` 之前唤醒，那么返回值 `= nanosTimeout - 消耗时间` ，如果返回值 `<= 0` ,则可以认定它已经超时了
 
     /**
      * Causes the current thread to wait until it is signalled or interrupted,
@@ -370,7 +377,7 @@ public interface Condition {
      * @throws InterruptedException if the current thread is interrupted
      *         (and interruption of thread suspension is supported)
      */
-    boolean await(long time, TimeUnit unit) throws InterruptedException;
+    boolean await(long time, TimeUnit unit) throws InterruptedException; // 造成当前线程在接到信号、被中断或到达指定等待时间之前一直处于等待状态。
 
     /**
      * Causes the current thread to wait until it is signalled or interrupted,
@@ -447,7 +454,9 @@ public interface Condition {
      * @throws InterruptedException if the current thread is interrupted
      *         (and interruption of thread suspension is supported)
      */
-    boolean awaitUntil(Date deadline) throws InterruptedException;
+    boolean awaitUntil(Date deadline) throws InterruptedException; // 造成当前线程在接到信号、被中断或到达指定最后期限之前一直处于等待状态。如果没有到指定时间就被通知，则返回 true ，否则表示到了指定时间，返回返回 false
+
+    /** ================== 唤醒 ================== **/
 
     /**
      * Wakes up one waiting thread.
@@ -465,7 +474,7 @@ public interface Condition {
      * not held. Typically, an exception such as {@link
      * IllegalMonitorStateException} will be thrown.
      */
-    void signal();
+    void signal(); // 唤醒一个等待线程。该线程从等待方法返回前必须获得与Condition相关的锁
 
     /**
      * Wakes up all waiting threads.
@@ -483,5 +492,5 @@ public interface Condition {
      * not held. Typically, an exception such as {@link
      * IllegalMonitorStateException} will be thrown.
      */
-    void signalAll();
+    void signalAll(); // // 唤醒所有等待线程。能够从等待方法返回的线程必须获得与Condition相关的锁
 }
