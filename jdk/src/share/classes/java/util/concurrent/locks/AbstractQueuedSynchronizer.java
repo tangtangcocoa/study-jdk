@@ -1954,10 +1954,15 @@ public abstract class AbstractQueuedSynchronizer
      *
      * <p>This class is Serializable, but all fields are transient,
      * so deserialized conditions have no waiters.
+     *
      */
     public class ConditionObject implements Condition, java.io.Serializable {
         private static final long serialVersionUID = 1173984872572414699L;
         /** First node of condition queue. */
+        /**
+         * ConditionObject 拥有首节点（firstWaiter），尾节点（lastWaiter）。
+         * 当前线程调用 #await()方法时，将会以当前线程构造成一个节点（Node），并将节点加入到该队列的尾部
+         */
         private transient Node firstWaiter; // 头节点
         /** Last node of condition queue. */
         private transient Node lastWaiter;  // 尾节点
