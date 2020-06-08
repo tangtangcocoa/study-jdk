@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="458031e4-b9ad-45cb-bf5a-4ac54c68894d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/CyclicBarrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/CyclicBarrier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/Condition.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/Condition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/Lock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/LockSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/LockSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/ReadWriteLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/ReadWriteLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/ReentrantLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/ReentrantLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/ReentrantReadWriteLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/ReentrantReadWriteLock.java" afterDir="false" />
-    </list>
+    <list default="true" id="458031e4-b9ad-45cb-bf5a-4ac54c68894d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,8 +33,8 @@
       <file leaf-file-name="AbstractQueuedSynchronizer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="1967" column="35" lean-forward="true" selection-start-line="1967" selection-start-column="35" selection-end-line="1967" selection-end-column="35" />
+            <state relative-caret-position="363">
+              <caret line="1963" column="11" selection-start-line="1963" selection-start-column="11" selection-end-line="1963" selection-end-column="11" />
               <folding>
                 <element signature="e#22203#22204#0" expanded="true" />
                 <element signature="e#22254#22255#0" expanded="true" />
@@ -325,12 +315,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590037751732</updated>
-      <workItem from="1590037756929" duration="35557000" />
+      <workItem from="1590037756929" duration="35818000" />
     </task>
+    <task id="LOCAL-00001" summary="git">
+      <created>1591618371938</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591618371938</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35557000" />
+    <option name="totallyTimeSpent" value="35818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-310" width="2560" height="1440" extended-state="0" />
@@ -370,6 +368,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git" />
+    <option name="LAST_COMMIT_MESSAGE" value="git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -496,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jdk/src/share/classes/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="1967" column="35" lean-forward="true" selection-start-line="1967" selection-start-column="35" selection-end-line="1967" selection-end-column="35" />
+        <state relative-caret-position="363">
+          <caret line="1963" column="11" selection-start-line="1963" selection-start-column="11" selection-end-line="1963" selection-end-column="11" />
           <folding>
             <element signature="e#22203#22204#0" expanded="true" />
             <element signature="e#22254#22255#0" expanded="true" />
